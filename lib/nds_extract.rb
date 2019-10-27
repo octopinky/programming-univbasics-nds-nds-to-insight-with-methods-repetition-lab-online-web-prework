@@ -46,10 +46,12 @@ def total_gross(source)
   # Visit each key (i.e. director name), look up the value in the hash
   # returned by directors_totals, and add it to a running total. When done,
   # return the total
+  total_budget=[]
   director_totals = directors_totals(source)
   director_names = list_of_directors(source)
   #binding.pry
-  movie_budget = source[0][:movies][0][:worldwide_gross]
+  movies_gross = source[0][:movies][0][:worldwide_gross]
+  source.each do |total_names_and_gross|
 end
 
 
