@@ -1,6 +1,9 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require_relative './directors_database'
 
+require 'pry'
+
+pp directors_database
 def directors_totals(source)
   result = {}
   director_index = 0
@@ -25,7 +28,12 @@ def gross_for_director(d)
 end
 
 def list_of_directors(source)
-  # Write this implementation
+  result=[]
+  #list of directors correctly extracts :name keys out of an AoH where
+  source.each do |director|
+   result << director[:name]
+  end
+  result
 end
 
 def total_gross(source)
@@ -38,6 +46,9 @@ def total_gross(source)
   # Visit each key (i.e. director name), look up the value in the hash
   # returned by directors_totals, and add it to a running total. When done,
   # return the total
+  binding.pry
+  director_totals = directors_totals(source)
+  director_names = list_of_directors(source)
 end
 
 
