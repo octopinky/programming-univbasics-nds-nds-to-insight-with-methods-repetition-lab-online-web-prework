@@ -49,7 +49,7 @@ def total_gross(source)
   director_totals = directors_totals(source)
   director_names = list_of_directors(source)
   binding.pry
-  movie_budget = source[:worldwide_gross]
+  movie_budget = source[0][:movies][:worldwide_gross]
 end
 
 
