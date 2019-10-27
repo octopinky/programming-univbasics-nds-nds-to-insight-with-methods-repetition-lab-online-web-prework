@@ -51,7 +51,7 @@ def total_gross(source)
   director_names = list_of_directors(source)
   movies_gross = source[0][:movies][0][:worldwide_gross]
   source.each do |total_names_and_gross|
- # binding.pry
+ binding.pry
    total_names_and_gross.each do |movie_gross|
      pp movie_gross
      pp "hoorraaayyy"
