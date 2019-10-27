@@ -52,9 +52,9 @@ def total_gross(source)
   movies_gross = source[0][:movies][0][:worldwide_gross]
   source.each do |total_names_and_gross|
    total_names_and_gross.each do |movie_gross|
+ binding.pry
      pp movie_gross[:movies]
      pp "hoorraaayyy"
- binding.pry
    end
   end
 end
