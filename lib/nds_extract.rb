@@ -54,6 +54,7 @@ def total_gross(source)
  # binding.pry
    total_names_and_gross.each do |movie_gross|
      pp movie_gross
+     pp "hoorraaayyy"
    end
   end
 end
