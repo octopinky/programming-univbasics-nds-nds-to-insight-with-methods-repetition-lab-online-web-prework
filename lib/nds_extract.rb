@@ -53,7 +53,7 @@ def total_gross(source)
   
   source.each do |total_names_and_gross|
     #total_gross += total_names_and_gross[:movies][0][:worldwide_gross]
-    total_names_and_gross[:movies][0].each do |mov|
+    total_names_and_gross[:movies].each do |mov|
     binding.pry
       total_gross += mov[:worldwide_gross]
     end
